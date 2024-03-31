@@ -84,6 +84,31 @@ h2{
 	font-size: 30px;
 	color: #1D6154
 }
+
+.filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 51px;
+}
+.button-filter {
+    border: 1px solid #1D6154;
+    border-radius: 60px;
+    margin-right: 10px;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 14px;
+    color: #1D6154;
+    cursor: pointer;
+}
+.button-filter-focus {
+    color: #FFFFFF;
+    background: #1D6154;
+    border: 1px solid #1D6154;
+}
 nav ul {
 	display: flex;
 	align-items: center;

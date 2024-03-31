@@ -28,3 +28,4 @@ db.works.belongsTo(db.users, {
 });
 
 module.exports = db;
+
