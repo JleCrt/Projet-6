@@ -222,7 +222,7 @@ footer nav ul {
 }
 
 /* login page */
-.user-login-container {
+.user-login-content {
     margin-top: 100px;
     height: 625px;
 }
@@ -297,4 +297,116 @@ footer nav ul {
     line-height: 16px;
     color: rgb(230, 28, 28);
     margin-bottom: 10px;
+}
+
+/** Barre d'edition **/
+.container-edit {
+	background: #000000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	gap: 20px;
+	display: none;
+}
+.info-edit {
+	color: #FFFFFF;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	display: flex;
+	gap: 10px;
+}
+.fa-pen-to-square {
+	width: 15px;
+	height: 15px;
+	padding-right: 10px;
+}
+
+/** Bouton Modifier **/
+.btn-modify {
+	display: none;
+	position: absolute;
+	border: none;
+	background: none;
+	padding: 4px 8px;
+	cursor: pointer;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	top: 572px;
+	right: 370px;
+}
+
+/** Modal **/
+.modal {
+	display: none;
+	background:#0000009d;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.modal-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+#modal-gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	width: 630px;
+	height: 730px;
+	background: white;
+	border-radius: 10px;
+}
+#modal-gallery h2 {
+	font-family: 'Work Sans' ;
+	font-size: 26px;
+	font-weight: 400;
+	text-align: center;
+	color: black;
+	margin-top: 60px;
+	margin-bottom: 46px;
+	padding-top: 20px;
+}
+.separation {
+	width: 420px;
+	height: 1px;
+	background: #B3B3B3;
+	margin: 47px auto 0 auto;
+}
+.btn-exit {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: white;
+	border: none;
+}
+.btn-exit i {
+	font-weight: 600;
+	font-size: 24px;
+	cursor: pointer;
+}
+.btn-add-photo {
+	background: #1D6154;
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 10px 27px;
+	text-align: center;
+	width: 237px;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-top: 38px;
 }
