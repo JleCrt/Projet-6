@@ -43,10 +43,12 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<button id="modal-appear" class="btn-modify">
-			<i class="fa-regular fa-pen-to-square"></i>modifier
-		</button>
+		<div class="projects-modify">
+			<h2>Mes Projets</h2>
+			<button id="modal-appear" class="btn-modify">
+				<i class="fa-regular fa-pen-to-square"></i>modifier
+			</button>
+		</div>
 		<div class="filter">
 		</div>
 		<div class="modal">
@@ -56,6 +58,7 @@
 						<i class="fa-solid fa-xmark"></i>
 					</button>
 					<h2>Galerie photo</h2>
+					<div class="gallery-container"></div>
 					<div class="separation"></div>
 					<div class="btn-modal-gallery">
 						<button class="btn-add-photo">
@@ -63,15 +66,43 @@
 						</button>
 					</div>
 				</div>
+				<div id="modal-add">
+					<button class="btn-back">
+						<i class="fa-solid fa-arrow-left"></i>
+					</button>
+					<button class="btn-exit">
+						<i class="fa-solid fa-xmark"></i> 
+					</button>
+					<h2>Ajout photo</h2>
+					<form method="POST" id="send-img" > 
+						<div class="add-img">
+							<i class="fa-regular fa-image"></i>
+							<label for="upload-img">+ Ajouter photo</label>
+							<input type="file" id="upload-img" onchange="previewPicture(this)"
+								accept=".jpg,.jpeg,.png" onchange="checkSubmitButton()">
+							<img src="#" alt="" id="image-preview">
+							<p>jpg, png : 4mo max</p>
+						</div>
+						<div class="add-img-info">
+							<label for="titre">Titre</label>
+							<input type="text" name="titre" id="titre" onchange="checkSubmitButton()">
+							<label for="categorie">Catégorie</label>
+							<select name="categorie" id="categorie" onchange="checkSubmitButton()"></select>
+						</div>
+						<div class="separation"></div>
+						<div class="btn-modal-add">
+							<p class="error-modal"></p>
+							<button disabled type="submit" class="btn-send" id="btn-submit">
+								Valider
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	<div class="gallery">
+		<div class="btn-filter-container"></div>
 	</div>
-	<div class="btn-filter-container">
-	</div>
-		</div>
-			<div class="gallery">
-			</div>
+		<div class="gallery"></div>
 	</section>
 	<section id="contact">
 		<h2>Contact</h2>

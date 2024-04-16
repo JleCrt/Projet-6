@@ -325,9 +325,14 @@ footer nav ul {
 }
 
 /** Bouton Modifier **/
+.projects-modify {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
 .btn-modify {
 	display: none;
-	position: absolute;
 	border: none;
 	background: none;
 	padding: 4px 8px;
@@ -338,8 +343,7 @@ footer nav ul {
 	font-size: 14px;
 	line-height: 16px;
 	text-align: center;
-	top: 572px;
-	right: 370px;
+	margin-bottom: 2em;
 }
 
 /** Modal **/
@@ -364,9 +368,10 @@ footer nav ul {
 	align-items: center;
 	position: relative;
 	width: 630px;
-	height: 730px;
+	height: 688px;
 	background: white;
 	border-radius: 10px;
+	padding-bottom: 32px;
 }
 #modal-gallery h2 {
 	font-family: 'Work Sans' ;
@@ -383,6 +388,14 @@ footer nav ul {
 	height: 1px;
 	background: #B3B3B3;
 	margin: 47px auto 0 auto;
+}
+.btn-back {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 20px;
+	background: white;
+	border: none;
 }
 .btn-exit {
 	position: absolute;
@@ -409,4 +422,197 @@ footer nav ul {
 	cursor: pointer;
 	color: #FFFFFF;
 	margin-top: 38px;
+}
+
+/* Modal Galery*/
+.gallery-container{
+	width: 420px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-column-gap: 4px;
+	grid-row-gap: 18px;
+
+}
+.gallery-container img {
+	width: 100%;
+	height: 105px;
+	object-fit: cover;
+}
+.gallery-container figure {
+	width: 74px;
+	height: 119px;
+	position: relative;
+}
+.icons-container {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+
+  }
+.icons-container i {
+	font-size: 12px;
+	margin: 2px;
+	color: white;
+	background: #000000;
+	padding: 2px;
+}
+.resize-ico{
+	display: none;
+}
+.gallery-container figure:hover .resize-ico{
+	display: inline-block;
+}
+.btn-modal-gallery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 23px;
+}
+.btn-add-photo {
+	background: #1D6154;
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 10px 27px;
+	text-align: center;
+	width: 237px;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-top: 38px;
+}
+.btn-delete {
+	font-family: 'Work Sans';
+	font-weight: 400;
+	color: #D65353;
+	border: none;
+	background: none;
+}
+/* Modal Add */
+#modal-add{
+	position: relative;
+	display: none;
+	background-color: #FFFFFF;
+	width: 630px;
+	height: 670px;
+	border-radius: 10px;
+	border: none;
+	padding-bottom: 40px;
+}
+
+#modal-add h2 {
+	font-family: 'Work Sans';
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: black;
+  margin-top: 60px;
+  margin-bottom: 46px;
+  padding-top: 20px;
+}
+#send-img {
+	display: flex;
+	flex-direction: column;
+}
+.add-img {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 420px;
+	height: 169px;
+	background: #E8F1F7;
+	border-radius: 10px;
+	gap: 12px;
+	margin: 0 105px;
+}
+.add-img i {
+	font-size: 60px;
+	color: #CBD6DC;
+	padding-top: 18px;
+}
+.add-img input {
+	display: none;
+}
+.add-img label {
+	color: #306685;
+	background: #CBD6DC;
+	padding: 10px 33px;
+	border-radius: 50px;
+}
+.add-img p {
+	padding-bottom: 19px;
+}
+.add-img-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.add-img-info label {
+	margin: 21px 0 10px 0;
+}
+.add-img-info input {
+	text-align: center;	
+}
+.add-img-info select {
+	text-align: center;
+}
+#titre, #categorie {
+	width: 420px;
+	height: 50px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+.btn-modal-add {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.btn-send {
+	background: grey; 
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 10px 27px;
+	text-align: center;
+	width: 237px;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-top: 38px;
+}
+.active {
+	background: #1D6154; 
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 10px 27px;
+	text-align: center;
+	width: 237px;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-top: 38px;
+}
+.error-modal{
+	color: red;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 22px 0 0 0;
+}
+#image-preview {
+	position: absolute;
+	max-width: 420px;
+	max-height: 169px;
+	object-fit: cover;
 }
