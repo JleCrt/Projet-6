@@ -31,7 +31,7 @@
 	</nav>
 </header>
 <main>
-	<section id="introduction">
+	<div id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="Photo de Sophie Bluel">
 		</figure>
@@ -41,7 +41,7 @@
 			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
-	</section>
+	</div>
 	<section id="portfolio">
 		<div class="projects-modify">
 			<h2>Mes Projets</h2>
@@ -78,8 +78,7 @@
 						<div class="add-img">
 							<i class="fa-regular fa-image"></i>
 							<label for="upload-img">+ Ajouter photo</label>
-							<input type="file" id="upload-img" onchange="previewPicture(this)"
-								accept=".jpg,.jpeg,.png" onchange="checkSubmitButton()">
+							<input type="file" id="upload-img" onchange="previewPicture(this); checkSubmitButton()" accept=".jpg,.jpeg,.png">
 							<img src="#" alt="" id="image-preview">
 							<p>jpg, png : 4mo max</p>
 						</div>
@@ -101,7 +100,6 @@
 			</div>
 		</div>
 		<div class="btn-filter-container"></div>
-	</div>
 		<div class="gallery"></div>
 	</section>
 	<section id="contact">
