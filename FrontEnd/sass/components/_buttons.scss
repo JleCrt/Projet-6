@@ -1,0 +1,92 @@
+// BOUTONS FILTRES
+.filter {
+    @include button-display;
+    width: 100%;
+    column-gap: 10px;
+    margin-bottom: 51px;
+}
+.button-filter {
+    border: 1px solid $first_color;
+    border-radius: 60px;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 9px 14px;
+    color: $first_color;
+    cursor: pointer;
+}
+.button-filter-focus {
+    color: $third_color;
+    background: $first_color;
+    border: 1px solid $first_color;
+}
+
+// BOUTON LOGIN
+.btn-login-container{
+    button {
+        @include button-modal-green;
+        width: 180px;
+        margin: 27px 0px 37px 0px;
+    }
+}
+
+// BOUTON MODIFIER
+.projects-modify {
+	@include button-display;
+	gap: 10px;
+    .btn-modify {
+        display: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        margin-bottom: 70px;
+        padding: 140px 0 0 20px;
+    }
+}
+
+// BOUTONS MODALS
+.btn-back {
+	@include button-back-exit;
+    font-size: 20px;
+    left: 20px;
+}
+.btn-exit {
+	@include button-back-exit;
+	right: 20px;
+    i {
+        font-weight: 600;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+.btn-add-photo {
+	@include button-modal-green;
+}
+
+// Modal Gallery
+.btn-modal-gallery {
+	@include button-display;
+	flex-direction: column;
+	gap: 23px;
+    .btn-add-photo {
+        @include button-modal-green;
+    }
+}
+
+// Modal Add
+.btn-modal-add {
+	@include button-display;
+	flex-direction: column;
+    .btn-send {
+        @include button-modal-green;
+    }
+    .active {
+        @include button-modal-green;
+    }
+}

@@ -194,7 +194,7 @@ async function deleteWork(id) {
       });
       if (response.ok) {
           showWorks(0);
-          console.log('Supprimer avec succès');
+          console.log('Supprimé avec succès');
       } else {
           console.log('Une erreur s\'est produite lors de la suppression');
       }

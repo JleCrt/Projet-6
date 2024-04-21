@@ -1,0 +1,107 @@
+h2 {
+	font-weight: 700;
+	font-size: 2.1rem;
+	color: $first_color;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+    margin-top: 140px;
+    figure, article {
+        flex: 1
+    }
+    img {
+        display: block;
+        margin: auto;
+        width: 80%;
+    }
+    h2 {
+        margin-bottom: 1em;
+    }
+    p {
+        margin-bottom: 0.5em;
+    }
+}
+
+#portfolio {
+    .projects {
+	text-align: center;
+	margin-bottom: 70px;
+    padding-top: 140px;
+    }
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+    img {
+        width: 100%;
+    }
+}
+
+#contact {
+	width: 50%;
+    margin: auto;
+    & > * {
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 10px;
+        padding-top: 100px;
+    }
+    form {
+        text-align: left;
+        margin-top:30px;
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        height: 50px;
+        font-size: 1.2em;
+        border: none;
+        @include box-shadow;
+    }
+    label {
+        margin: 2em 0 1em 0;
+    }
+    textarea {
+        border: none;
+        @include box-shadow;
+    }
+}
+
+input[type="submit"]{
+	font-weight: 700;
+	color: $third_color;
+	background-color: $first_color;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+// BARRE D'ÉDITION
+.container-edit {
+	background: $fourth_color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	gap: 20px;
+	display: none;
+}
+.info-edit {
+	color: $third_color;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1rem;
+	display: flex;
+	gap: 10px;
+}
+.fa-pen-to-square {
+	width: 15px;
+	height: 15px;
+	padding-right: 10px;
+}

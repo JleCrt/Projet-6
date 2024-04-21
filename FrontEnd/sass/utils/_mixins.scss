@@ -1,0 +1,31 @@
+@mixin box-shadow {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+@mixin button-modal-green {
+    background: $first_color;
+    border-radius: 60px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 27px;
+    text-align: center;
+    width: 237px;
+    cursor: pointer;
+    color: $third_color;
+    margin-top: 38px;
+}
+
+@mixin button-back-exit {
+    position: absolute;
+	top: 20px;
+    background: $third_color;
+	border: none;
+}
+
+@mixin button-display {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}

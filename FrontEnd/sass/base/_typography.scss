@@ -1,0 +1,71 @@
+// HEADER
+h1 {
+    font-family: $font_secondary;
+    > span {
+        font-family: $font_primary;
+    }
+}
+
+h2 {
+    font-family: $font_secondary;
+}
+
+input[type="submit"]{
+    font-family: $font_secondary;
+}
+
+.info-edit {
+    font-family: $font_primary;
+}
+
+.input-form label {
+    font-family: $font_primary;
+    & input {
+        font-family: $font_primary;
+    }
+}
+
+.button-login-container {
+    button {
+    font-family: $font_secondary;
+    }
+    & a {
+        font-family: $font_primary;
+    }
+    & p {
+        font-family: $font_primary;
+    }
+}
+
+.button-filter {
+    font-family: $font_secondary;
+}
+
+.btn-modify {
+    font-family: $font_primary;
+}
+
+// MODAL
+#modal-gallery h2 {
+    font-family: $font_primary;
+}
+
+.btn-add-photo {
+    font-family: $font_secondary;
+}
+
+.btn-delete {
+    font-family: $font_primary;
+}
+
+#modal-add h2 {
+    font-family: $font_primary;
+}
+
+.btn-send {
+    font-family: $font_secondary;
+}
+
+.active {
+    font-family: $font_secondary;
+}
