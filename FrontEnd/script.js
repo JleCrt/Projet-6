@@ -93,6 +93,9 @@ async function callAPI(endpoint) {
       btnModify.forEach(function (button) {
         button.style.display = "inline-block";
       });
+      // Disparition des boutons de filtre
+      const filter = document.querySelector(".filter");
+      filter.style.display = "none";
     } 
     else {
       // Disparition de logout/Apparition de login si pas de token
@@ -173,14 +176,14 @@ function addFigureToGalleryContainer(work) {
   iconsContainer.appendChild(deleteIcon);
   figure.appendChild(iconsContainer);
 
-  // Écouteurs d'événement pour la suppression d'un projet
+// Écouteurs d'événement pour la suppression d'un projet
   deleteIcon.addEventListener('click', async () => {
     await deleteWork(work.id);
     figure.remove();
   });
   galleryContainer.appendChild(figure);
 }
-//Suppression d'un projet
+// Suppression d'un projet
 async function deleteWork(id) {
   const token = localStorage.getItem('token');
   if (!token) return;
@@ -229,6 +232,11 @@ let previewPicture = function (e) {
   }
 };
 
+// Ajout d'un gestionnaire d'événements 'change'
+const uploadImgInput = document.getElementById("upload-img");
+uploadImgInput.addEventListener("change", function(event) {
+    previewPicture(event.target);
+});
 
 //  Gestion des catégories dans ModalAdd
 const selectCategories = document.getElementById("categorie");
@@ -260,6 +268,16 @@ const formUploadWorks = document.getElementById("send-img");
 const submitBtnWorks = document.getElementById("btn-submit");
 
 formUploadWorks.addEventListener("submit", submitWork);
+
+// Ajout d'un événement "input" à chaque champ du formulaire
+const titreInput = document.getElementById("titre");
+const categorieInput = document.getElementById("categorie");
+const ImgInput = document.getElementById("upload-img");
+
+titreInput.addEventListener("input", checkSubmitButton);
+categorieInput.addEventListener("input", checkSubmitButton);
+ImgInput.addEventListener("change", checkSubmitButton);
+
 // Soumettre le formulaire
 function submitWork(e) {
   e.preventDefault();
@@ -322,3 +340,46 @@ function checkSubmitButton() {
     errorMsgModal.textContent= "Tout les champs doivent être rempli !";
   }
 }
+
+// RÉINITIALISATION DE LA MODALADD
+const imgElements = document.querySelectorAll(".add-img i, .add-img label, .add-img input, .add-img p");
+//Fonction pour réinitialiser les champs du formulaire et l'aperçu de l'image
+function resetModalAdd() {
+  document.getElementById("titre").value = "";
+  document.getElementById("categorie").value = "";
+  const imagePreview = document.getElementById("image-preview");
+  imagePreview.src = "";
+  imagePreview.style.display = "none";
+  // Affichage des éléments dans la div add-img
+  addImgElements.forEach(element => {
+    element.style.display = "block";
+  });
+  // Réinitialise la valeur de l'input type="file"
+  const uploadImgToInput = document.getElementById("upload-img");
+  uploadImgToInput.remove();
+  // Création d'un nouvel élément input pour gérer le "Parcourir"
+  const newUploadImgInput = document.createElement("input");
+  newUploadImgInput.type = "file";
+  newUploadImgInput.id = "upload-img";
+  newUploadImgInput.addEventListener("change", previewPicture);
+  const addImgContainer = document.querySelector(".add-img");
+  addImgContainer.appendChild(newUploadImgInput);
+}
+
+// Écouteur d'événement pour réinitialisation de la modalAdd
+const returnToModal = document.querySelector(".btn-back");
+returnToModal.addEventListener("click", function () {
+  modalAdd.style.display = "none";
+  modalGallery.style.display = "flex";
+  resetModalAdd();
+});
+
+// Écouteur d'événement sur le window pour réinitialisation de la modalAdd
+window.addEventListener("click", function (event) {
+  if (event.target === modalContent || event.target === modal) {
+    modalGallery.style.display = "flex";
+    modal.style.display = "none";
+    modalAdd.style.display = "none";
+    resetModalAdd();
+  }
+});

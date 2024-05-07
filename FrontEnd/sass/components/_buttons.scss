@@ -7,6 +7,7 @@
 }
 .button-filter {
     border: 1px solid $first_color;
+    background-color: $third_color;
     border-radius: 60px;
     margin-right: 10px;
     font-style: normal;
@@ -85,6 +86,7 @@
 	flex-direction: column;
     .btn-send {
         @include button-modal-green;
+        background-color: #a7a7a7;
     }
     .active {
         @include button-modal-green;

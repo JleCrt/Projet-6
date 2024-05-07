@@ -91,6 +91,10 @@ input[type="submit"]{
 	padding: 10px;
 	gap: 20px;
 	display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .info-edit {
 	color: $third_color;
